@@ -1,0 +1,131 @@
+1- JNI FUNCTIONS
+void Java_sg_vantagepoint_uncrackable2_MainActivity_init(void)
+
+{
+  FUN_00100918();
+  DAT_0011300c = 1;
+  return;
+}// This is the main activity function
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+void Java_sg_vantagepoint_uncrackable2_CodeCheck_bar //code check function
+               (long *param_1,undefined8 param_2,undefined8 param_3)
+
+{
+  long lVar1;
+  int iVar2;
+  undefined8 uVar3;
+  char *__s1;
+  undefined8 local_50;
+  undefined8 uStack_48;
+  undefined8 local_40;
+  long local_38;
+
+  lVar1 = tpidr_el0;
+  local_38 = *(long *)(lVar1 + 0x28);
+  uVar3 = 0;
+  if (DAT_0011300c == '\x01') {
+    uStack_48 = 0x74206c6c6120726f;
+    local_50 = 0x6620736b6e616854;
+    local_40 = 0x68736966206568;
+    __s1 = (char *)(**(code **)(*param_1 + 0x5c0))(param_1,param_3,0);
+    iVar2 = (**(code **)(*param_1 + 0x558))(param_1,param_3);
+    if ((iVar2 == 0x17) && (iVar2 = strncmp(__s1,(char *)&local_50,0x17), iVar2 == 0)) {
+      uVar3 = 1;
+    }
+    else {
+      uVar3 = 0;
+    }
+  }
+  if (*(long *)(lVar1 + 0x28) == local_38) {
+    return;
+  }
+                    /* WARNING: Subroutine does not return */
+  __stack_chk_fail(uVar3);
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+APK signature verification result:
+Valid APK signature v1 found
+Signer CERT.RSA (META-INF/CERT.SF)
+Type: X.509
+Version: 3
+Serial number: 0x71861047
+Subject: CN=Jeroen Willemsen, OU=OMTG, O=OWASP, L=Amsterdam, C=NL
+Valid from: Tue Aug 28 02:31:01 IST 2018
+Valid until: Sat Aug 22 02:31:01 IST 2043
+Public key type: RSA
+Exponent: 65537
+Modulus size (bits): 2048
+Modulus: 17015576572051765181486540017741044803721108557364183786053756086523278332885423198276385730642416681952257865361476702646583356846951787236118011313986209229357938207404357857713536045442533175606742390875607905061375823188731453375834710432486645279165741574127942081900784487960806678749446912002864074253694233504123733231520652332362275042219236845882106567831628080893764031136045267125912203573818127193756515778073016871079804660718116275630474260238406960572120737868632153503103729779014008322164898684625688205238707276257604460627590868848234478308014374047438813813491305230122711169002966591350232063997
+Signature type: SHA256withRSA
+Signature OID: 1.2.840.113549.1.1.11
+MD5 Fingerprint: 10 61 E3 C4 90 01 FC C5 F0 79 32 52 78 DF 94 CA
+SHA-1 Fingerprint: 13 E4 9A 39 E6 28 81 7C BB DE 28 81 F4 64 6C 2A 0B 22 AD B2
+SHA-256 Fingerprint: CB E6 8A B8 7D 64 34 1C 3F C7 81 19 DC 12 29 E8 AA 86 F9 3F DB 2C 33 AA 61 25 2F D4 91 48 5B 1D
+Valid APK signature v2 found
+Signer 1
+Type: X.509
+Version: 3
+Serial number: 0x71861047
+Subject: CN=Jeroen Willemsen, OU=OMTG, O=OWASP, L=Amsterdam, C=NL
+Valid from: Tue Aug 28 02:31:01 IST 2018
+Valid until: Sat Aug 22 02:31:01 IST 2043
+Public key type: RSA
+Exponent: 65537
+Modulus size (bits): 2048
+Modulus: 17015576572051765181486540017741044803721108557364183786053756086523278332885423198276385730642416681952257865361476702646583356846951787236118011313986209229357938207404357857713536045442533175606742390875607905061375823188731453375834710432486645279165741574127942081900784487960806678749446912002864074253694233504123733231520652332362275042219236845882106567831628080893764031136045267125912203573818127193756515778073016871079804660718116275630474260238406960572120737868632153503103729779014008322164898684625688205238707276257604460627590868848234478308014374047438813813491305230122711169002966591350232063997
+Signature type: SHA256withRSA
+Signature OID: 1.2.840.113549.1.1.11
+MD5 Fingerprint: 10 61 E3 C4 90 01 FC C5 F0 79 32 52 78 DF 94 CA
+SHA-1 Fingerprint: 13 E4 9A 39 E6 28 81 7C BB DE 28 81 F4 64 6C 2A 0B 22 AD B2
+SHA-256 Fingerprint: CB E6 8A B8 7D 64 34 1C 3F C7 81 19 DC 12 29 E8 AA 86 F9 3F DB 2C 33 AA 61 25 2F D4 91 48 5B 1D
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+NATIVE LIBS
+
+
+
+Arch list: arm64-v8a, armeabi-v7a, x86, x86_64
+
+Per arch count: arm64-v8a:1, armeabi-v7a:1, x86:1, x86_64:1
+
+Total count: 4
+
+lib/arm64-v8a/libfoo.so
+
+lib/armeabi-v7a/libfoo.so
+
+lib/x86/libfoo.so
+
+lib/x86_64/libfoo.so
+
+
+
+
+
+Package name:
+
+package sg.vantagepoint.uncrackable2;
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+Strings
+DEFINED	001004f9		utf8 u8"__cxa_finalize"	"__cxa_finalize"	string	15	true
+DEFINED	00100508		utf8 u8"__cxa_atexit"	"__cxa_atexit"	string	13	true
+DEFINED	00100515		utf8 u8"Java_sg_vantagepoint_uncrackable2_CodeCheck_bar"	"Java_sg_vantagepoint_uncrackable2_CodeCheck_bar"	string	48	true
+DEFINED	00100545		utf8 u8"Java_sg_vantagepoint_uncrackable2_MainActivity_init"	"Java_sg_vantagepoint_uncrackable2_MainActivity_init"	string	52	true
+DEFINED	00100579		utf8 u8"__stack_chk_fail"	"__stack_chk_fail"	string	17	true
+DEFINED	0010058f		utf8 u8"getppid"	"getppid"	string	8	true
+DEFINED	00100597		utf8 u8"pthread_create"	"pthread_create"	string	15	true
+DEFINED	001005a6		utf8 u8"pthread_exit"	"pthread_exit"	string	13	true
+DEFINED	001005b3		utf8 u8"ptrace"	"ptrace"	string	7	true
+DEFINED	001005ba		utf8 u8"strncmp"	"strncmp"	string	8	false
+DEFINED	001005c2		utf8 u8"waitpid"	"waitpid"	string	8	true
+DEFINED	001005ca		utf8 u8"libm.so"	"libm.so"	string	8	false
+DEFINED	001005d2		utf8 u8"libdl.so"	"libdl.so"	string	9	false
+DEFINED	001005db		utf8 u8"libc.so"	"libc.so"	string	8	false
+DEFINED	001005e3		utf8 u8"_edata"	"_edata"	string	7	true
+DEFINED	001005ea		utf8 u8"__bss_start"	"__bss_start"	string	12	true
+DEFINED	001005f6		utf8 u8"__bss_start__"	"__bss_start__"	string	14	true
+DEFINED	00100604		utf8 u8"__bss_end__"	"__bss_end__"	string	12	true
+DEFINED	00100610		utf8 u8"__end__"	"__end__"	string	8	true
+DEFINED	0010061d		utf8 u8"libfoo.so"	"libfoo.so"	string	10	true
+DEFINED	00101dec		ds "Android" (ElfNote_8_132.name)	"Android"	string	8	true
